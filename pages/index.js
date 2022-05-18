@@ -22,7 +22,7 @@ const Home = ({ projects }) => (
       <VStack spacing={12}>
         <Section>
           <VStack spacing={4} align="start" fontSize="2xl">
-            <Heading size="xl">Hey, I'm Daniel 👋</Heading>
+            <Heading size="xl">Hey, I'm Edvaldo 👋</Heading>
             <VStack>
               <Text>
                 I'm a designer, developer and entrepreneur of sorts. Born and

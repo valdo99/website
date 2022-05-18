@@ -32,7 +32,7 @@ const AvatarNavigation = () => {
       <Avatar
         name="Daniel Wirtz"
         size="sm"
-        src="/avatar-small.jpg"
+        src="/avatar-small.png"
         cursor="pointer"
       />
     </Link>
@@ -44,7 +44,7 @@ const AvatarNavigation = () => {
         <Avatar
           name="Daniel Wirtz"
           size="sm"
-          src="/avatar-small.jpg"
+          src="/avatar-small.png"
           cursor="pointer"
         />
       </PopoverTrigger>

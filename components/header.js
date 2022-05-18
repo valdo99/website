@@ -135,22 +135,7 @@ const Header = () => {
                       </HStack>
                     </MenuItem>
                   </Link>
-                  <Link href="/bookmarks">
-                    <MenuItem
-                      _hover={{
-                        bg: useColorModeValue("neutral.200", "neutralD.200"),
-                      }}
-                    >
-                      <HStack>
-                        <Icon
-                          as={BookmarkIcon}
-                          size={18}
-                          color={useColorModeValue("blue.500", "blue.200")}
-                        />
-                        <Text>Bookmarks</Text>
-                      </HStack>
-                    </MenuItem>
-                  </Link>
+
                   <Link href="/tools">
                     <MenuItem
                       _hover={{

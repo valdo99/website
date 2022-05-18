@@ -18,7 +18,7 @@ const AuthorCard = ({ readingTime, publishedAt, url }) => {
   return (
     <Stack direction="row" justify="space-between">
       <HStack>
-        <Avatar src="/avatar-small.jpg" h={10} w={10}></Avatar>
+        <Avatar src="/avatar-small.png" h={10} w={10}></Avatar>
         <VStack spacing={0} align="start">
           <Text fontSize="md" fontWeight="500">
             Daniel Wirtz

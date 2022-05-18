@@ -19,14 +19,8 @@ import {
 import PageTransition from "../components/page-transitions";
 import { getTable } from "@/lib/airtable";
 import Section from "@/components/section";
-import BookCard from "@/components/book-card";
 
-import BookSuggestion from "@/components/book-suggestion";
-import {
-  BookOpenIcon,
-  DesktopComputer,
-  HeartIcon,
-} from "@heroicons/react/solid";
+import { DesktopComputer } from "@heroicons/react/solid";
 import sorter from "sort-isostring";
 import { AndroidLogo, AppleLogo, Globe, Monitor } from "phosphor-react";
 import ToolCard from "../components/tool-card";
@@ -115,7 +109,7 @@ const Tools = ({ tools }) => {
               <TabPanel px={0}>
                 <SimpleGrid columns={[1, 2]} spacing={4} mt={8}>
                   {tools
-                    .filter((t) => t.fields.Platform === "Mac")
+                    .filter((t) => t.fields.Platform[0] === "web")
                     .sort((x, y) => sorter(y.fields.ID, x.fields.ID))
                     .map((tool) => (
                       <ToolCard
@@ -123,7 +117,7 @@ const Tools = ({ tools }) => {
                         name={tool.fields.Name}
                         description={tool.fields.Description}
                         image={tool.fields.Image}
-                        platform={tool.fields.Platform}
+                        platform={tool.fields.Platform[0]}
                         isAffiliate={tool.fields.Affiliate}
                         link={tool.fields.Link}
                       />
@@ -133,7 +127,7 @@ const Tools = ({ tools }) => {
               <TabPanel px={0}>
                 <SimpleGrid columns={[1, 2]} spacing={4} mt={8}>
                   {tools
-                    .filter((t) => t.fields.Platform === "Android")
+                    .filter((t) => t.fields.Platform[0] === "Android")
                     .sort((x, y) => sorter(y.fields.ID, x.fields.ID))
                     .map((tool) => (
                       <ToolCard
@@ -141,7 +135,7 @@ const Tools = ({ tools }) => {
                         name={tool.fields.Name}
                         description={tool.fields.Description}
                         image={tool.fields.Image}
-                        platform={tool.fields.Platform}
+                        platform={tool.fields.Platform[0]}
                         isAffiliate={tool.fields.Affiliate}
                         link={tool.fields.Link}
                       />
@@ -151,7 +145,7 @@ const Tools = ({ tools }) => {
               <TabPanel px={0}>
                 <SimpleGrid columns={[1, 2]} spacing={4} mt={8}>
                   {tools
-                    .filter((t) => t.fields.Platform === "Chrome")
+                    .filter((t) => t.fields.Platform[0] === "Chrome")
                     .sort((x, y) => sorter(y.fields.ID, x.fields.ID))
                     .map((tool) => (
                       <ToolCard
@@ -159,7 +153,7 @@ const Tools = ({ tools }) => {
                         name={tool.fields.Name}
                         description={tool.fields.Description}
                         image={tool.fields.Image}
-                        platform={tool.fields.Platform}
+                        platform={tool.fields.Platform[0]}
                         isAffiliate={tool.fields.Affiliate}
                         link={tool.fields.Link}
                       />
@@ -169,7 +163,7 @@ const Tools = ({ tools }) => {
               <TabPanel px={0}>
                 <SimpleGrid columns={[1, 2]} spacing={4} mt={8}>
                   {tools
-                    .filter((t) => t.fields.Platform === "Web")
+                    .filter((t) => t.fields.Platform[0] === "Web")
                     .sort((x, y) => sorter(y.fields.ID, x.fields.ID))
                     .map((tool) => (
                       <ToolCard
@@ -177,7 +171,7 @@ const Tools = ({ tools }) => {
                         name={tool.fields.Name}
                         description={tool.fields.Description}
                         image={tool.fields.Image}
-                        platform={tool.fields.Platform}
+                        platform={tool.fields.Platform[0]}
                         isAffiliate={tool.fields.Affiliate}
                         link={tool.fields.Link}
                       />
@@ -194,7 +188,7 @@ const Tools = ({ tools }) => {
 
 export async function getStaticProps() {
   const tools = await getTable("Tools");
-
+  console.log(tools);
   return {
     props: {
       tools,

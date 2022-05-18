@@ -62,7 +62,7 @@ export default function Newsletter({ posts }) {
                     borderColor="gray.200"
                   >
                     <HStack p={4} fontSize="sm" spacing={4}>
-                      <Avatar src="/avatar-small.jpg" h={8} w={8}></Avatar>
+                      <Avatar src="/avatar-small.png" h={8} w={8}></Avatar>
                       <VStack spacing={0} alignItems="left">
                         <Text>
                           <Text

@@ -55,7 +55,7 @@ const Footer = () => {
           © {date} Daniel Wirtz{" "}
         </Text> */}
         <HStack spacing={4}>
-          <Link href="https://twitter.com/wirtzdan/" isExternal unstyled>
+          <Link href="https://twitter.com/wirtzdan/" isexternal unstyled>
             <IconButton
               size="sm"
               icon={<Icon as={TwitterLogo} weight="fill" />}
@@ -64,7 +64,7 @@ const Footer = () => {
           </Link>
           <Link
             href="https://www.linkedin.com/in/wirtzdan/"
-            isExternal
+            isexternal
             unstyled
           >
             <IconButton
@@ -73,7 +73,7 @@ const Footer = () => {
               color={useColorModeValue("neutral.800", "neutralD.1000")}
             ></IconButton>
           </Link>
-          <Link href="https://github.com/wirtzdan" isExternal unstyled>
+          <Link href="https://github.com/wirtzdan" isexternal unstyled>
             <IconButton
               size="sm"
               icon={<GithubLogo weight="fill" />}
@@ -83,7 +83,7 @@ const Footer = () => {
           <Link
             href="https://www.youtube.com/channel/UCje_bQMr6F45x0Auii7IOvA"
             unstyled
-            isExternal
+            isexternal
           >
             <IconButton
               size="sm"
