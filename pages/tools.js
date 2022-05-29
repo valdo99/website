@@ -188,7 +188,6 @@ const Tools = ({ tools }) => {
 
 export async function getStaticProps() {
   const tools = await getTable("Tools");
-  console.log(tools);
   return {
     props: {
       tools,

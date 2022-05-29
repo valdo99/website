@@ -34,7 +34,6 @@ const BlogCard = ({
   views,
   videoLength,
 }) => {
-  console.log("banner →", readingTime(mdx));
   return (
     <Link href={`/blog/${slug}`} unstyled>
       <VStack
@@ -113,12 +112,14 @@ const BlogCard = ({
                 {title}
               </Text>
             </HStack>
-            {/* <Text
-              fontSize="sm"
-              color={useColorModeValue("neutral.1000", "neutralD.1000")}
-            >
-              {summary}
-            </Text> */}
+            {summary && (
+              <Text
+                fontSize="sm"
+                color={useColorModeValue("neutral.1000", "neutralD.1000")}
+              >
+                {summary}
+              </Text>
+            )}
           </VStack>
 
           <HStack

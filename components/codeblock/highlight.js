@@ -34,8 +34,6 @@ function Highlight({
 }) {
   const baseTheme = useColorModeValue(prismLight, prismDark);
 
-  console.log("baseTheme →", baseTheme.plain);
-
   const { colorMode } = useColorMode();
 
   const customTheme = {

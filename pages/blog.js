@@ -1,5 +1,4 @@
 import React from "react";
-import fs from "fs";
 import {
   VStack,
   Text,
@@ -13,7 +12,6 @@ import Section from "@/components/section";
 import BlogCard from "@/components/blog-card";
 import sorter from "sort-isostring";
 import NewsletterDrawer from "@/components/newsletter-modal";
-import generateRssIcon from "@/lib/rss";
 import { getAllPosts } from "../lib/airtable";
 import Hero from "@/components/hero";
 import NewsletterModal from "@/components/newsletter-modal";
@@ -44,10 +42,6 @@ export default function Blog({ posts }) {
 
 export async function getStaticProps() {
   const posts = await getAllPosts();
-
-  const rss = await generateRssIcon(posts);
-
-  fs.writeFileSync("./public/rss.xml", rss);
 
   return {
     props: {

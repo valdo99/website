@@ -6,24 +6,24 @@ export default async (req, res) => {
   }
 
   try {
-    const API_KEY = process.env.BUTTONDOWN_API_KEY;
-    const response = await fetch(
-      `https://api.buttondown.email/v1/subscribers`,
-      {
-        body: JSON.stringify({ email }),
-        headers: {
-          Authorization: `Token ${API_KEY}`,
-          "Content-Type": "application/json",
-        },
-        method: "POST",
-      }
-    );
+    const API_KEY = process.env.SENDINBLUE_API_KEY;
+    const response = await fetch(`https://api.sendinblue.com/v3/contacts`, {
+      body: JSON.stringify({ email }),
+      headers: {
+        "api-key": `${API_KEY}`,
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+    });
 
     const responseJson = await response.json();
 
+    console.log(responseJson);
+
     if (response.status >= 400) {
+      console.log(responseJson);
       return res.status(400).json({
-        error: await responseJson[0],
+        error: responseJson?.message,
       });
     }
 
