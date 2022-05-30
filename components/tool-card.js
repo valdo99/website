@@ -57,24 +57,11 @@ const ToolCard = ({
             bottom={0}
             left={0}
             right={0}
-            opacity={0.25}
+            opacity={0.18}
           ></Box>
-          {/* <ChakraImage
-            src={image ? image[0].thumbnails.large.url : "/"}
-            top={0}
-            left={0}
-            bottom={0}
-            right={0}
-            height={56}
-            width={56}
-            transform="scale(1.7)"
-            filter="blur(13px) opacity(0.5);"
-            layout="fixed"
-            rounded="md"
-            position="absolute"
-          ></ChakraImage> */}
           <Image
             src={image ? image[0].thumbnails.large.url : "/"}
+            style={{ objectFit: "contain" }}
             boxSize="36px"
             rounded="md"
           ></Image>

@@ -33,10 +33,6 @@ const MobileNavigation = () => {
       route: `/blog`,
       title: `Blog`,
     },
-    {
-      route: `/books`,
-      title: `Books`,
-    },
   ];
 
   const menuvariants = {

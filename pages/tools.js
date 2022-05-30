@@ -13,18 +13,14 @@ import {
   TabPanel,
   useColorModeValue,
   SimpleGrid,
-  Box,
-  Wrap,
 } from "@chakra-ui/react";
 import PageTransition from "../components/page-transitions";
 import { getTable } from "@/lib/airtable";
 import Section from "@/components/section";
 
-import { DesktopComputer } from "@heroicons/react/solid";
 import sorter from "sort-isostring";
-import { AndroidLogo, AppleLogo, Globe, Monitor } from "phosphor-react";
+import { FileJsx, RocketLaunch, Database, ComputerTower } from "phosphor-react";
 import ToolCard from "../components/tool-card";
-import { Chrome } from "react-feather";
 import Hero from "@/components/hero";
 
 const Tools = ({ tools }) => {
@@ -54,8 +50,8 @@ const Tools = ({ tools }) => {
                 mt={2}
               >
                 <HStack spacing={1}>
-                  <Icon as={AppleLogo} weight="fill" />
-                  <Text>Mac</Text>
+                  <Icon as={RocketLaunch} weight="fill" />
+                  <Text>Startups</Text>
                 </HStack>
               </Tab>
               <Tab
@@ -69,8 +65,8 @@ const Tools = ({ tools }) => {
                 mt={2}
               >
                 <HStack spacing={1}>
-                  <Icon as={AndroidLogo} weight="fill" />
-                  <Text>Android</Text>
+                  <Icon as={Database} weight="fill" />
+                  <Text>Backend</Text>
                 </HStack>
               </Tab>
               <Tab
@@ -85,8 +81,8 @@ const Tools = ({ tools }) => {
                 s
               >
                 <HStack spacing={1}>
-                  <Icon as={Chrome} weight="fill" />
-                  <Text>Chrome</Text>
+                  <Icon as={FileJsx} weight="fill" />
+                  <Text>Frontend</Text>
                 </HStack>
               </Tab>
               <Tab
@@ -100,8 +96,8 @@ const Tools = ({ tools }) => {
                 mt={2}
               >
                 <HStack spacing={1}>
-                  <Icon as={DesktopComputer} />
-                  <Text>Web</Text>
+                  <Icon as={ComputerTower} />
+                  <Text>Infrastructure</Text>
                 </HStack>
               </Tab>
             </TabList>
@@ -109,7 +105,7 @@ const Tools = ({ tools }) => {
               <TabPanel px={0}>
                 <SimpleGrid columns={[1, 2]} spacing={4} mt={8}>
                   {tools
-                    .filter((t) => t.fields.Platform[0] === "web")
+                    .filter((t) => t.fields.Platform[0] === "startups")
                     .sort((x, y) => sorter(y.fields.ID, x.fields.ID))
                     .map((tool) => (
                       <ToolCard
@@ -127,7 +123,7 @@ const Tools = ({ tools }) => {
               <TabPanel px={0}>
                 <SimpleGrid columns={[1, 2]} spacing={4} mt={8}>
                   {tools
-                    .filter((t) => t.fields.Platform[0] === "Android")
+                    .filter((t) => t.fields.Platform[0] === "backend")
                     .sort((x, y) => sorter(y.fields.ID, x.fields.ID))
                     .map((tool) => (
                       <ToolCard
@@ -145,7 +141,7 @@ const Tools = ({ tools }) => {
               <TabPanel px={0}>
                 <SimpleGrid columns={[1, 2]} spacing={4} mt={8}>
                   {tools
-                    .filter((t) => t.fields.Platform[0] === "Chrome")
+                    .filter((t) => t.fields.Platform[0] === "frontend")
                     .sort((x, y) => sorter(y.fields.ID, x.fields.ID))
                     .map((tool) => (
                       <ToolCard
@@ -163,7 +159,7 @@ const Tools = ({ tools }) => {
               <TabPanel px={0}>
                 <SimpleGrid columns={[1, 2]} spacing={4} mt={8}>
                   {tools
-                    .filter((t) => t.fields.Platform[0] === "Web")
+                    .filter((t) => t.fields.Platform[0] === "infrastructure")
                     .sort((x, y) => sorter(y.fields.ID, x.fields.ID))
                     .map((tool) => (
                       <ToolCard

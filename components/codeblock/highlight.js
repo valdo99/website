@@ -40,7 +40,7 @@ function Highlight({
     ...baseTheme,
     plain: {
       ...baseTheme.plain,
-      fontFamily: "IBM Plex Mono",
+      fontFamily: "Lato",
       fontSize: "14px",
       lineHeight: "26px",
     },

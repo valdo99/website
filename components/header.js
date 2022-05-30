@@ -119,23 +119,6 @@ const Header = () => {
                   onMouseEnter={onOpen}
                   onMouseLeave={onClose}
                 >
-                  <Link href="/books">
-                    <MenuItem
-                      _hover={{
-                        bg: useColorModeValue("neutral.200", "neutralD.200"),
-                      }}
-                    >
-                      <HStack>
-                        <Icon
-                          as={BookOpenIcon}
-                          size={18}
-                          color={useColorModeValue("blue.500", "blue.200")}
-                        />
-                        <Text>Books</Text>
-                      </HStack>
-                    </MenuItem>
-                  </Link>
-
                   <Link href="/tools">
                     <MenuItem
                       _hover={{

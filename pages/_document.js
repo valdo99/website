@@ -10,15 +10,10 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
           <link
-            rel="preload"
-            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&family=Red+Hat+Text:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
-            rel="stylesheet"
-          />
-
-          <link
-            rel="preload"
-            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Lato&family=Oswald:wght@500&display=swap"
             rel="stylesheet"
           />
           <link href="/static/favicons/favicon.ico" rel="shortcut icon" />

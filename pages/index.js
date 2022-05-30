@@ -25,28 +25,21 @@ const Home = ({ projects }) => (
             <Heading size="xl">Hey, I'm Edvaldo 👋</Heading>
             <VStack>
               <Text>
-                I'm a designer, developer and entrepreneur of sorts. Born and
-                raised in Germany and now living in the Netherlands. The focus
-                of my work is the{" "}
-                <Link variant="text" href="https://www.facilitator.school">
-                  Facilitator School
-                </Link>
-                . In my spare time, I work on{" "}
-                <Link variant="text" href="https://markway.io">
-                  Markway
-                </Link>
-                . I also hang out on{" "}
-                <Link variant="text" href="https://twitter.com/wirtzdan">
-                  Twitter
+                I'm a freelancer based in Italy who wants to support startups by
+                helping them making technical decisions. I'm mainly focused on
+                the fintech industry, but I'm also interested in Web3 and dev
+                tools. You can also find me on{" "}
+                <Link variant="text" href="https://github.com/valdo99">
+                  Github
                 </Link>{" "}
                 and{" "}
                 <Link
                   variant="text"
-                  href="https://www.linkedin.com/in/wirtzdan/"
+                  href="https://www.linkedin.com/in/edvaldo-g-20a271121/"
                 >
                   LinkedIn
                 </Link>
-                , where I learn, think and work in public.
+                , where I keep up with new technologies and share my work.
               </Text>
             </VStack>
             {/* <Link href="https://twitter.com/wirtzdan" unstyled>
