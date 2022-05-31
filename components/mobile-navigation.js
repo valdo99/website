@@ -16,6 +16,7 @@ import ThemeToggle from "./theme-toggle";
 import NewsletterDrawer from "./newsletter-drawer";
 import MobileMenuButton from "./mobile-menu-button";
 import Link from "next/link";
+import { LightningBoltIcon } from "@heroicons/react/solid";
 
 const MobileNavigation = () => {
   const [isOpen, toggleOpen] = useCycle(false, true);
@@ -91,10 +92,10 @@ const MobileNavigation = () => {
           <MenuToggle toggle={() => toggleOpen()} />
         </Center>
         <Center w="100%">
-          <Link href="/newsletter" px={6}>
+          <Link href="/tools" px={6}>
             <MobileMenuButton
-              label="Newsletter"
-              icon={<MailIcon />}
+              label="Tools"
+              icon={<LightningBoltIcon />}
             ></MobileMenuButton>
           </Link>
         </Center>

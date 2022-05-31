@@ -28,11 +28,9 @@ import Container from "./container";
 import { useRouter } from "next/router";
 import ThemeToggle from "./theme-toggle";
 import {
-  BookmarkIcon,
-  BookOpenIcon,
-  ChevronDownIcon,
   LightningBoltIcon,
-  MenuIcon,
+  BookmarkIcon,
+  MailOpenIcon,
   DotsHorizontalIcon,
 } from "@heroicons/react/solid";
 import Link from "next/link";
@@ -96,7 +94,7 @@ const Header = () => {
             <HStack ml={-4} spacing={2}>
               <NavLink href="/about" name="About" />
               <NavLink href="/blog" name="Blog" />
-              <NavLink href="/newsletter" name="Newsletter" />
+              <NavLink href="/tools" name="Tools" />
               <Menu isOpen={isOpen}>
                 <MenuButton
                   bg={useColorModeValue("neutral.100", "neutralD.300")}
@@ -119,7 +117,7 @@ const Header = () => {
                   onMouseEnter={onOpen}
                   onMouseLeave={onClose}
                 >
-                  <Link href="/tools">
+                  <Link href="/newsletter">
                     <MenuItem
                       _hover={{
                         bg: useColorModeValue("neutral.200", "neutralD.200"),
@@ -127,11 +125,11 @@ const Header = () => {
                     >
                       <HStack>
                         <Icon
-                          as={LightningBoltIcon}
+                          as={MailOpenIcon}
                           size={18}
                           color={useColorModeValue("blue.500", "blue.200")}
                         />
-                        <Text>Tools</Text>
+                        <Text>Newsletter</Text>
                       </HStack>
                     </MenuItem>
                   </Link>

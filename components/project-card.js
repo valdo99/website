@@ -65,6 +65,7 @@ const ProjectCard = ({ name, description, logo, link, type }) => {
             width={36}
             layout="fixed"
             rounded="md"
+            objectFit="contain"
           ></Image>
         </Box>
 

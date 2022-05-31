@@ -48,12 +48,7 @@ const Footer = () => {
         my={8}
       >
         <FooterLink href="mailto:edvaldogjonikaj@gmail.com" name="Contact" />
-        {/* <Text
-          fontSize="sm"
-          color={useColorModeValue("neutral.800", "neutralD.800")}
-        >
-          © {date} Daniel Wirtz{" "}
-        </Text> */}
+
         <HStack spacing={4}>
           <Link href="https://twitter.com/valdozzz1/" isexternal unstyled>
             <IconButton

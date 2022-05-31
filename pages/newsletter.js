@@ -72,7 +72,7 @@ export default function Newsletter({ posts }) {
                           >
                             From:
                           </Text>{" "}
-                          Daniel Wirtz
+                          Edvaldo Gjonikaj
                         </Text>
                         <Text>
                           <Text

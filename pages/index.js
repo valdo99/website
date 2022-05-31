@@ -66,16 +66,22 @@ const Home = ({ projects }) => (
           <VStack align="start" spacing={8}>
             <Heading size="lg">Projects</Heading>
             <SimpleGrid columns={1} spacing={4} mt={8} w="100%">
-              {projects.map((projects) => (
-                <ProjectCard
-                  key={projects.id}
-                  name={projects.fields.name}
-                  description={projects.fields.description}
-                  logo={projects.fields.logo}
-                  link={projects.fields.link}
-                  type={projects.fields.type}
-                />
-              ))}
+              {projects
+                .sort((a, b) => {
+                  if (a.fields.position < b.fields.position) return -1;
+                  if (a.fields.position === b.fields.position) return 0;
+                  return 1;
+                })
+                .map((projects) => (
+                  <ProjectCard
+                    key={projects.id}
+                    name={projects.fields.name}
+                    description={projects.fields.description}
+                    logo={projects.fields.logo}
+                    link={projects.fields.link}
+                    type={projects.fields.type}
+                  />
+                ))}
             </SimpleGrid>
           </VStack>
         </Section>

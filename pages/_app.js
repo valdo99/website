@@ -14,7 +14,7 @@ const App = ({ Component, pageProps }) => {
   return (
     <>
       <ChakraProvider theme={customTheme}>
-        <PlausibleProvider domain="danielwirtz.com">
+        <PlausibleProvider domain="edvaldogjonikaj.me">
           <Head>
             <meta
               content="width=device-width, initial-scale=1"
@@ -24,7 +24,7 @@ const App = ({ Component, pageProps }) => {
               rel="icon"
               type="image/png"
               sizes="96x96"
-              href="/favicon.png"
+              href="/avatar-small.png"
             />
             <meta name="theme-color" content="#2BB0EC" />
           </Head>

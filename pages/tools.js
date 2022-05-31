@@ -19,7 +19,13 @@ import { getTable } from "@/lib/airtable";
 import Section from "@/components/section";
 
 import sorter from "sort-isostring";
-import { FileJsx, RocketLaunch, Database, ComputerTower } from "phosphor-react";
+import {
+  FileJsx,
+  RocketLaunch,
+  Database,
+  ComputerTower,
+  BracketsCurly,
+} from "phosphor-react";
 import ToolCard from "../components/tool-card";
 import Hero from "@/components/hero";
 
@@ -29,7 +35,7 @@ const Tools = ({ tools }) => {
       <VStack spacing={8}>
         <Hero
           title="Tools"
-          subtitle="A list of my favorite tools that I use on a regular basis and that I would recommend to try."
+          subtitle="A list of my favorite startups, tools and technologies I like."
         ></Hero>
         <Section>
           <Tabs
@@ -100,12 +106,27 @@ const Tools = ({ tools }) => {
                   <Text>Infrastructure</Text>
                 </HStack>
               </Tab>
+              <Tab
+                bg={useColorModeValue("neutral.300", "neutralD.300")}
+                color={useColorModeValue("neutral.900", "neutralD.900")}
+                _selected={{
+                  color: "blue.800",
+                  bg: "blue.100",
+                }}
+                mr={2}
+                mt={2}
+              >
+                <HStack spacing={1}>
+                  <Icon as={BracketsCurly} />
+                  <Text>Dev tools</Text>
+                </HStack>
+              </Tab>
             </TabList>
             <TabPanels>
               <TabPanel px={0}>
                 <SimpleGrid columns={[1, 2]} spacing={4} mt={8}>
                   {tools
-                    .filter((t) => t.fields.Platform[0] === "startups")
+                    .filter((t) => t.fields.Platform.includes("startups"))
                     .sort((x, y) => sorter(y.fields.ID, x.fields.ID))
                     .map((tool) => (
                       <ToolCard
@@ -123,7 +144,7 @@ const Tools = ({ tools }) => {
               <TabPanel px={0}>
                 <SimpleGrid columns={[1, 2]} spacing={4} mt={8}>
                   {tools
-                    .filter((t) => t.fields.Platform[0] === "backend")
+                    .filter((t) => t.fields.Platform.includes("backend"))
                     .sort((x, y) => sorter(y.fields.ID, x.fields.ID))
                     .map((tool) => (
                       <ToolCard
@@ -141,7 +162,7 @@ const Tools = ({ tools }) => {
               <TabPanel px={0}>
                 <SimpleGrid columns={[1, 2]} spacing={4} mt={8}>
                   {tools
-                    .filter((t) => t.fields.Platform[0] === "frontend")
+                    .filter((t) => t.fields.Platform.includes("frontend"))
                     .sort((x, y) => sorter(y.fields.ID, x.fields.ID))
                     .map((tool) => (
                       <ToolCard
@@ -160,6 +181,24 @@ const Tools = ({ tools }) => {
                 <SimpleGrid columns={[1, 2]} spacing={4} mt={8}>
                   {tools
                     .filter((t) => t.fields.Platform[0] === "infrastructure")
+                    .sort((x, y) => sorter(y.fields.ID, x.fields.ID))
+                    .map((tool) => (
+                      <ToolCard
+                        key={tool.id}
+                        name={tool.fields.Name}
+                        description={tool.fields.Description}
+                        image={tool.fields.Image}
+                        platform={tool.fields.Platform[0]}
+                        isAffiliate={tool.fields.Affiliate}
+                        link={tool.fields.Link}
+                      />
+                    ))}
+                </SimpleGrid>
+              </TabPanel>
+              <TabPanel px={0}>
+                <SimpleGrid columns={[1, 2]} spacing={4} mt={8}>
+                  {tools
+                    .filter((t) => t.fields.Platform[0] === "dev-tools")
                     .sort((x, y) => sorter(y.fields.ID, x.fields.ID))
                     .map((tool) => (
                       <ToolCard

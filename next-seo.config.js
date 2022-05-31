@@ -1,19 +1,19 @@
-const title = "Daniel Wirtz";
-const description = "Designer, tech enthusiast and entrepreneur of sorts";
+const title = "Edvaldo Gjonikaj";
+const description = "Technologist, startupper and hungry software engineer";
 
 const SEO = {
   title,
   description,
-  canonical: "https://danielwirtz.com",
+  canonical: "https://edvaldogjonikaj.me",
   openGraph: {
     type: "website",
     locale: "en_IE",
-    url: "https://danielwirtz.com",
+    url: "https://edvaldogjonikaj.me",
     title,
     description,
     images: [
       {
-        url: "https://danielwirtz.com/static/images/banner.jpg",
+        url: "https://edvaldogjonikaj.me/static/images/banner.jpg",
         alt: title,
         width: 2240,
         height: 1260,
@@ -21,8 +21,8 @@ const SEO = {
     ],
   },
   twitter: {
-    handle: "@wirtzdan",
-    site: "@wirtzdan",
+    handle: "@valdozzz1",
+    site: "@valdozzz1",
     cardType: "summary_large_image",
   },
 };

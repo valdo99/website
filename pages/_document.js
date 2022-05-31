@@ -16,7 +16,7 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Lato&family=Oswald:wght@500&display=swap"
             rel="stylesheet"
           />
-          <link href="/static/favicons/favicon.ico" rel="shortcut icon" />
+          <link href="/avatar-small.png" rel="shortcut icon" />
           <link href="/static/favicons/site.webmanifest" rel="manifest" />
           <link
             href="/static/favicons/apple-touch-icon.png"
@@ -24,13 +24,13 @@ class MyDocument extends Document {
             sizes="180x180"
           />
           <link
-            href="/static/favicons/favicon-32x32.png"
+            href="/avatar-small.png"
             rel="icon"
             sizes="32x32"
             type="image/png"
           />
           <link
-            href="/static/favicons/favicon-16x16.png"
+            href="/avatar-small.png"
             rel="icon"
             sizes="16x16"
             type="image/png"
