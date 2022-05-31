@@ -59,10 +59,7 @@ class NewsletterLayout extends React.Component {
                   <Heading as="h1">{this.props.frontMatter.Subject}</Heading>
                   <AuthorCard
                     publishedAt={this.props.frontMatter["Pulished On"]}
-                    url={
-                      "https://edvaldogjonike.com/archive/" +
-                      this.props.frontMatter.slug
-                    }
+                    url={"https://edvaldogjonike.com/newsletter"}
                     readingTime={this.props.frontMatter.readingTime.text}
                   />
                 </VStack>
