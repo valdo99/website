@@ -49,6 +49,7 @@ const ProjectCard = ({ name, description, logo, link, type }) => {
           overflow="hidden"
           lineHeight={0}
           boxShadow="inset 0 0 1px 1px rgba(0, 0, 0, 0.04)"
+          flexShrink={0}
         >
           <Box
             bg={data.lightVibrant}
@@ -66,6 +67,7 @@ const ProjectCard = ({ name, description, logo, link, type }) => {
             layout="fixed"
             rounded="md"
             objectFit="contain"
+            flexShrink={0}
           ></Image>
         </Box>
 
