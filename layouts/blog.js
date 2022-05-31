@@ -112,8 +112,8 @@ class BlogLayout extends React.Component {
           </Section>
           <Section mt={8}>
             <SubscribeCard
-              title="Subscribe to my newsletter"
-              description="Helpful tools, thoughtful articles and other findings from the web. From my desk to yours."
+              title="From the moon 🌚 to you 🚀"
+              description="You will recieve a weekly report of the best startups, dev tools and technologies"
             />
           </Section>
           <ReadingProgress target={target} />

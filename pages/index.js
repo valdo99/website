@@ -57,8 +57,8 @@ const Home = ({ projects }) => (
         </Section>
         <Section>
           <SubscribeCard
-            title="Subscribe to my newsletter"
-            description="Helpful tools, thoughtful articles and other findings from the web. From my desk to yours."
+            title="From the moon 🌚 to you 🚀"
+            description="You will recieve a weekly report of the best startups, dev tools and technologies"
           />
         </Section>
 

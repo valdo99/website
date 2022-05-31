@@ -33,7 +33,7 @@ const BlogSeo = ({ title, summary, publishDate, url, image }) => {
         datePublished={date}
         description={summary}
         images={[image]}
-        publisherLogo="/static/favicons/android-chrome-192x192.png"
+        publisherLogo="/avatar-small.png"
         publisherName="Edvaldo Gjonikaj"
         title={title}
         url={url}

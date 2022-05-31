@@ -5,10 +5,7 @@ import {
   Heading,
   useColorModeValue,
   HStack,
-  Button,
   useDisclosure,
-  Box,
-  Avatar,
   Stack,
 } from "@chakra-ui/react";
 import PageTransition from "../components/page-transitions";
@@ -19,8 +16,6 @@ import Link from "@/components/link";
 import SubscribeCard from "@/components/subscribe-card";
 
 export default function Newsletter({ posts }) {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-
   return (
     <PageTransition>
       <Section>
@@ -33,8 +28,8 @@ export default function Newsletter({ posts }) {
               maxW="lg"
               textAlign="center"
             >
-              Helpful tools, thoughtful articles and other findings from the
-              web. From my desk to yours.
+              You will recieve a weekly report of the best startups, dev tools
+              and technologies
             </Text>
             <SubscribeCard
               image={false}
@@ -43,74 +38,16 @@ export default function Newsletter({ posts }) {
               card={false}
               center
             />
-            {isOpen ? (
-              <Box w="100%">
-                <Box
-                  border="1px solid"
-                  borderColor={useColorModeValue("gray.200", "gray.700")}
-                  w="100%"
-                  rounded="lg"
-                  overflow="hidden"
-                  boxShadow="lg"
-                  mt={8}
-                  w="100%"
-                >
-                  <Box
-                    w="100%"
-                    bg={useColorModeValue("gray.50", "neutralD.100")}
-                    borderBottom="1px"
-                    borderColor="gray.200"
-                  >
-                    <HStack p={4} fontSize="sm" spacing={4}>
-                      <Avatar src="/avatar-small.png" h={8} w={8}></Avatar>
-                      <VStack spacing={0} alignItems="left">
-                        <Text>
-                          <Text
-                            as="span"
-                            color={useColorModeValue("gray.600", "gray.400")}
-                            fontWeight="500"
-                          >
-                            From:
-                          </Text>{" "}
-                          Edvaldo Gjonikaj
-                        </Text>
-                        <Text>
-                          <Text
-                            as="span"
-                            color={useColorModeValue("gray.600", "gray.400")}
-                            fontWeight="500"
-                          >
-                            To:
-                          </Text>{" "}
-                          you@email.com
-                        </Text>
-                      </VStack>
-                    </HStack>
-                  </Box>
-                  <Box h="500px" w="100%" bg="white">
-                    <iframe
-                      width="100%"
-                      height="100%"
-                      src="https://buttondown.email/fromthedesk/archive/2-digital-christmas-cards-global-shipping-and/?as_embed=true"
-                    ></iframe>
-                  </Box>
-                </Box>
-              </Box>
-            ) : (
-              <Button onClick={onOpen} variant="link">
-                ... or see how it looks first
-              </Button>
-            )}
           </VStack>
 
           {/* {!posts.length && "No posts found."} */}
           <VStack w="full" spacing={8}>
             <Heading as="h2" size="md">
-              Read past newsletters
+              Past newsletters
             </Heading>
             <VStack alignItems="flex-start" spacing={4} w="full">
               {posts
-                .filter((p) => p.fields.Status === "Published")
+                .filter((p) => p.fields.status === "Published")
                 .sort((x, y) =>
                   sorter(y.fields["Published on"], x.fields["Published on"])
                 )
@@ -121,28 +58,21 @@ export default function Newsletter({ posts }) {
                       direction={["column", "row"]}
                       justify="space-between"
                       align="flex-start"
-                      w="full"
+                      width="full"
                     >
-                      <Link href={`/archive/${post.fields.Slug}`} unstyled>
-                        <HStack>
-                          <Text
-                            display={["none", "block"]}
-                            fontSize="md"
-                            color={useColorModeValue(
-                              "neutral.800",
-                              "neutralD.800"
-                            )}
-                          >
-                            {post.fields.Issue.toString().padStart(2, "0")}
-                          </Text>
-                          <Text
-                            _hover={{ textDecoration: "underline" }}
-                            fontSize="md"
-                          >
-                            {post.fields.Subject}
-                          </Text>
-                        </HStack>
-                      </Link>
+                      <HStack>
+                        <Text
+                          display={["none", "block"]}
+                          fontSize="md"
+                          color={useColorModeValue(
+                            "neutral.800",
+                            "neutralD.800"
+                          )}
+                        >
+                          {post.fields.number.toString().padStart(2, "0")}
+                        </Text>
+                        <Text fontSize="md">{post.fields.subject}</Text>
+                      </HStack>
                       <Text
                         display={["none", "block"]}
                         color={useColorModeValue("neutral.800", "neutralD.800")}

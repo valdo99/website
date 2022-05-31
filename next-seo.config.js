@@ -11,14 +11,14 @@ const SEO = {
     url: "https://edvaldogjonikaj.me",
     title,
     description,
-    images: [
-      {
-        url: "https://edvaldogjonikaj.me/static/images/banner.jpg",
-        alt: title,
-        width: 2240,
-        height: 1260,
-      },
-    ],
+    // images: [
+    //   {
+    //     url: "https://edvaldogjonikaj.me/static/images/banner.jpg",
+    //     alt: title,
+    //     width: 2240,
+    //     height: 1260,
+    //   },
+    // ],
   },
   twitter: {
     handle: "@valdozzz1",

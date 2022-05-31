@@ -11,8 +11,8 @@ import {
 import Subscribe from "@/components/subscribe";
 
 export const SubscribeCard = ({
-  title = "From the Desk",
-  description = "Helpful tools, thoughtful articles and other findings from the web. From my desk to yours.",
+  title = "From the moon 🌚 to you 🚀",
+  description = "You will recieve a weekly report of the best startups, dev tools and technologies",
   card = true,
   image = true,
   center = false,
@@ -41,6 +41,7 @@ export const SubscribeCard = ({
             boxSize={{ base: "80px", md: "150px" }}
             boxShadow="xs"
             filter={useColorModeValue("none", "invert(1)")}
+            objectFit="cover"
           />
         ) : undefined}
         <VStack align="start">
