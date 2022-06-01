@@ -32,7 +32,7 @@ const About = () => (
             <Link passHref variant="text" href="/tools">
               startups
             </Link>
-            . //I also like football and big fan of FC Internazionale.
+            .
           </Text>
         </VStack>
       </Section>
